@@ -14,9 +14,18 @@ int main()
     //&-取地址符号
     int sum = num1 + num2;
     printf("sum=%d\n",sum);
+    extern int num3;
+    printf("%d",num3);
     return 0;
 }
 
+void test()
+{
+    int num3 = 20;
+
+}
+//全局变量如果在某一函数之后声明的，它的作用范围不在此函数中。
+//如果我们需要在此函数中调用它们，就必须使用 extern 来对变量作“外部变量声明”，以扩展全局变量的作用域
 /*
  *变量分类
  * 全局变量
