@@ -11,27 +11,27 @@ enum sex//enum-枚举关键字
 
 int main()
 {
-        int sum = 0;
-        int sum1 = 0;
-        int sum2 = 0;
-        scanf("%d%d",&sum1,&sum2);
-        sum =sum1 + sum2;
-        printf("sum=%d\n",sum);
+    int sum = 0;
+    int sum1 = 0;
+    int sum2 = 0;
+    scanf("%d%d",&sum1,&sum2);
+    sum =sum1 + sum2;
+    printf("sum=%d\n",sum);
 
 
-        3;//字面常量
-        const int num = 4;//const-常属性
-        //const修饰的常变量
-        printf("%d\n",num);
-        //num = 8;//报错
-        printf("%d\n",num);
-        const int n = 10;//本质变量，具有常属性
-        //int arr[n] = {0};//报错
-        int arr[MAX] = {0};
+    3;//字面常量
+    const int num = 4;//const-常属性
+    //const修饰的常变量
+    printf("%d\n",num);
+    //num = 8;//报错
+    printf("%d\n",num);
+    const int n = 10;//本质变量，具有常属性
+    //int arr[n] = {0};//报错
+    int arr[MAX] = {0};
 
-        enum sex s = male;
-        printf("%d\n",male);
-        return 0;
+    enum sex s = male;
+    printf("%d\n",male);
+    return 0;
 }
 
 /*
