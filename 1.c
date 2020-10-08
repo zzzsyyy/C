@@ -13,7 +13,6 @@ int main()//主函数-程序的入口--有且仅有一个
     printf("%d\n", sizeof(long));//8/4
     printf("%d\n", sizeof(float));//4
     printf("%d\n", sizeof(double));//8
-
     return 0;//返回0
 }
 /*
@@ -24,23 +23,15 @@ long       //长整型
 long long  //更长整型
 float      //单精度浮点数  %f
 double     //双精度浮点数
- */
-
-/*
+ *//*
  %d-打印整型
  %c-打印字符
  %f-打印浮点数
  %lf-双精度浮点数
  %p-打印地址
  %x-打印十六进制
- */
-
-/*
+ *//*
  bit - 比特位
  byte- 字节-八个比特位
  kb  - 千字节
- Mb
- Gb
- Tb
- Pb
- */
+ Mb Gb Tb Pb */
