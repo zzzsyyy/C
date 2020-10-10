@@ -33,7 +33,7 @@ int main()
     return 0;
 }
 
-int Add(int num1,int num2)//函数，后面不加分好
+int Add(int num1,int num2)//函数，后面不加分号
 {//函数体
     int sum = num1 + num2;
     return sum;
