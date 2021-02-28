@@ -81,6 +81,23 @@ void ComputerMove(char board[ROW][COL], int row, int col)
     }
 }
 
+int IsFull(char board[ROW][COL], int row, int col)
+{
+    int i = 0;
+    int j = 0;
+    for (i=0;i<row;i++)
+    {
+        for (j=0;j<col;j++)
+        {
+            if (board[i][j]==' ')
+            {
+                return 0;
+            }
+        }
+    }
+    return 1;
+}
+
 char IsWin (char board[ROW][COL], int row, int col)
 {
     int i = 0;
@@ -94,12 +111,12 @@ char IsWin (char board[ROW][COL], int row, int col)
         if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] != ' ')
             return board[0][i];
     }
-    if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != ' ')
-        return board[0][0];
-    if (board[2][0] == board[1][1] && board[1][1] == board[0][2] && board[0][0] != ' ')
+    if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
+        return board[1][1];
+    if (board[2][0] == board[1][1] && board[1][1] == board[0][2] && board[1][1] != ' ')
         return board[1][1];
     if (1 == IsFull(board, ROW, COL))
         return 'Q';
     else
-        return 'C'
+        return 'C';
 }

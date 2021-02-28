@@ -18,20 +18,20 @@ void game()
         PlayerMove(board, ROW, COL);
         DisplayBoard(board, ROW, COL);
         ret = IsWin(board, ROW, COL);
-        if (ret != 'c')
+        if (ret != 'C')
             break;
         ComputerMove(board, ROW, COL);
         DisplayBoard(board, ROW, COL);
         ret = IsWin(board, ROW, COL);
         if (ret != 'C')
             break;
-        if (ret == '*')
-            printf("玩家赢！\n");
-        else if (ret == '#')
-            printf("电脑赢！\n");
-        else
-            printf("平局！\n");
     }
+    if (ret == '*')
+        printf("玩家赢！\n");
+    else if (ret == '#')
+        printf("电脑赢！\n");
+    else
+        printf("平局！\n");
 }
 
 void test()
