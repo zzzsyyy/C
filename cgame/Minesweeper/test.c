@@ -1,19 +1,27 @@
-#include <stdio.h>
+#include "game.h"
 
 void menu ()
 {
+    printf("*******   扫雷   *********\n");
     printf("*******1.play   0.exit*********\n");
 }
 
 void game()
 {
-    printf("扫雷");
-    char board[9][9];
+    char mine[ROWS][COLS] = {0};
+    char show[ROWS][COLS] = {0};
+    InitBoard(mine, ROWS, COLS, '0');
+    InitBoard(show, ROWS, COLS, '*');
+    DisplayBoard(show, ROW, COL);
+    SetMine(mine, ROW, COL);
+    FindMine(mine, show, ROW, COL);
 }
 
 void test ()
 {
     int input = 0;
+    srand((unsigned int)time(NULL));
+
     do
     {
         menu();
@@ -33,12 +41,6 @@ void test ()
         }
     }while (input);
 }
-
-
-
-
-
-
 
 int main ()
 {
